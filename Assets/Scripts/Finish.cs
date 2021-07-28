@@ -4,9 +4,10 @@ public class Finish : MonoBehaviour
 {
     public static Finish instance = null; // Экземпляр объекта
 
-
     [SerializeField] private GameObject win;
     [SerializeField] private GameObject lose;
+
+    [SerializeField] private Admob admob;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Finish : MonoBehaviour
     public void loseGame()
     {
         lose.SetActive(true);
+        admob.staticShowAd();
     }
     public void winGame()
     {

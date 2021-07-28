@@ -18,6 +18,9 @@ public class SlotMachine : MonoBehaviour
 
     public void countMatches()
     {
+        for (int i = 0; i < numberOfMatches.Length; i++)
+            numberOfMatches[i] = 0;
+
         stopAllSlots();
 
         if (canGetWin)
